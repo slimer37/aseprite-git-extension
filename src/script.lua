@@ -13,14 +13,15 @@ function init(plugin)
         }
         return
     end
-  
-    --
+
     plugin:newCommand{
-        id="MyFirstCommand",
-        title="My First Command",
-        group="cel_popup_properties",
+        id="ViewGitHistory",
+        title="View Git History",
+        group="file_open",
         onclick=function()
-            plugin.preferences.count = plugin.preferences.count+1
+        end,
+        onenabled=function()
+            return app.activeImage ~= nil;
         end
     }
 end
