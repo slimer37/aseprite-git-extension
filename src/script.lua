@@ -19,6 +19,7 @@ function init(plugin)
         title="View Git History",
         group="file_open",
         onclick=function()
+            viewer.open()
         end,
         onenabled=function()
             return app.activeImage ~= nil;

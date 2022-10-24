@@ -12,7 +12,8 @@
     "categories": [ "Tools" ],
     "contributes": {
         "scripts": [
-            { "path": "./script.lua" }
+            { "path": "./script.lua" },
+            { "path": "./viewer.lua" }
         ]
     }
 }
