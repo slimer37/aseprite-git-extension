@@ -1,0 +1,18 @@
+{
+    "name": "git-viewer",
+    "displayName": "Git Viewer",
+    "description": "View git histories in Aseprite.",
+    "version": "0.1",
+    "author": { "name": "Alfred M",
+                "email": "slimer37dev@gmail.com",
+                "url": "https://github.com/slimer37" },
+    "contributors": [ ],
+    "publisher": "slimer37",
+    "license": "MIT",
+    "categories": [ "Tools" ],
+    "contributes": {
+        "scripts": [
+            { "path": "./script.lua" }
+        ]
+    }
+}
