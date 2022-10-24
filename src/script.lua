@@ -1,10 +1,17 @@
 function init(plugin)
     print("Aseprite is initializing my plugin")
-  
-    -- we can use "plugin.preferences" as a table with fields for
-    -- our plugin (these fields are saved between sessions)
-    if plugin.preferences.count == nil then
-        plugin.preferences.count = 0
+    print(io.tmpfile())
+
+    if (os.execute("git --version")) then
+        print("Git installation detected")
+    else
+        print("Git not found")
+        app.alert{
+            title="Git Not Found",
+            text="No Git installation detected. Please install Git to use Git Viewer.",
+            buttons="OK"
+        }
+        return
     end
   
     --
