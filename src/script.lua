@@ -27,8 +27,7 @@ function init(plugin)
         end
     }
 end
-  
+
 function exit(plugin)
-    print("Aseprite is closing my plugin, MyFirstCommand was called "
-        .. plugin.preferences.count .. " times")
+
 end
