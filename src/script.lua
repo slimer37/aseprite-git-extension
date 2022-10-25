@@ -1,6 +1,5 @@
 function init(plugin)
     print("Aseprite is initializing my plugin")
-    print(io.tmpfile())
 
     if (os.execute("git --version")) then
         print("Git installation detected")
@@ -19,7 +18,7 @@ function init(plugin)
         title="View Git History",
         group="file_open",
         onclick=function()
-            viewer.open()
+            viewer.open(app.activeSprite.filename)
         end,
         onenabled=function()
             return app.activeImage ~= nil;
