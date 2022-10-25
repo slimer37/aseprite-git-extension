@@ -33,8 +33,9 @@ function viewer.open(spriteFile)
             return
         end
 
-        app.open(file)
+        local sprite = app.open(file)
         os.delete(file)
+        sprite.filename = data.identifier .. ">" .. app.fs.fileName(relFile)
 
         if (#app.activeSprite.frames >= frameNumber) then
             app.activeFrame = app.activeSprite.frames[frameNumber];
