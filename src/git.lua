@@ -3,9 +3,9 @@ git = {}
 function git.loadFromCommit(identifier, repo, location)
     local tmpFilename = app.fs.joinPath(app.fs.tempPath, "aseprite-git-view" .. identifier .. ".ase")
     local cmd = "cd " .. repo .. " & git show --raw " .. identifier .. ":" .. "\"" .. string.gsub(location, "\\", "/") .. "\" > " .. tmpFilename
-    os.execute(cmd)
+    local success = os.execute(cmd)
 
-    return tmpFilename
+    return success, tmpFilename
 end
 
 -- Gets the repository of the file (empty if not found).
