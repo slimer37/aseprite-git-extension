@@ -15,7 +15,10 @@ function viewer.open(spriteFile)
 
     if data.go then
         local frameNumber = app.activeFrame.frameNumber;
-        app.open(git.loadFromCommit(data.identifier, repo, relFile))
+
+        local file = git.loadFromCommit(data.identifier, repo, relFile)
+        app.open(file)
+        os.delete(file)
 
         if (#app.activeSprite.frames >= frameNumber) then
             app.activeFrame = app.activeSprite.frames[frameNumber];
