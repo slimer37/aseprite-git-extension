@@ -14,6 +14,11 @@ function viewer.open(spriteFile)
         :show().data
 
     if data.go then
+        local frameNumber = app.activeFrame.frameNumber;
         app.open(git.loadFromCommit(data.identifier, repo, relFile))
+
+        if (#app.activeSprite.frames >= frameNumber) then
+            app.activeFrame = app.activeSprite.frames[frameNumber];
+        end
     end
 end
