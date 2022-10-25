@@ -2,12 +2,8 @@ git = {}
 
 function git.loadFromCommit(identifier, repo, location)
     local tmpFilename = app.fs.joinPath(app.fs.tempPath, "aseprite-git-view" .. identifier .. ".ase")
-    local tmp = assert(io.open(tmpFilename, "wb"))
-    local cmd = "cd " .. repo .. " & git show " .. identifier .. ":" .. "\"" .. string.gsub(location, "\\", "/") .. "\""
-    local out = os.capture(cmd, true)
-    tmp:write(out)
-
-    tmp:close()
+    local cmd = "cd " .. repo .. " & git show --raw " .. identifier .. ":" .. "\"" .. string.gsub(location, "\\", "/") .. "\" > " .. tmpFilename
+    os.execute(cmd)
 
     return tmpFilename
 end
