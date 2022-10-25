@@ -1,5 +1,7 @@
 function init(plugin)
-    print("Aseprite is initializing my plugin")
+    if (not app.isUIAvailable) then
+        return
+    end
 
     if (os.execute("git --version")) then
         print("Git installation detected")
