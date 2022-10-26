@@ -15,7 +15,8 @@
             { "path": "./script.lua" },
             { "path": "./viewer.lua" },
             { "path": "./git.lua" },
-            { "path": "./os.lua" }
+            { "path": "./os.lua" },
+            { "path": "./app.lua" }
         ]
     }
 }
