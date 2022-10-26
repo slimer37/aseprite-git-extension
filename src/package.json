@@ -2,7 +2,7 @@
     "name": "git-viewer",
     "displayName": "Git Viewer",
     "description": "View git histories in Aseprite.",
-    "version": "0.1",
+    "version": "0.2",
     "author": { "name": "Alfred M",
                 "email": "slimer37dev@gmail.com",
                 "url": "https://github.com/slimer37" },
