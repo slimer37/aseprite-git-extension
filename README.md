@@ -3,9 +3,15 @@ View git histories in Aseprite.
 
 ## Usage
 
-Open a sprite located in a git repository. Go to `File > View Git History` and select the commit to view.
+Open a sprite located in a git repository.
 
-The extension will open a new tab with a version of the sprite from that commit.
+Go to `File > View Git History` and select the commit to view.
+
+![Git History Menu](assets/menu_location.jpg)
+
+![Git Commit Selection](assets/menu_popup.jpg)
+
+A new tab will open with a version of the sprite from that commit.
 
 ## Installation
 
